@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <title>Split Bills</title>
+    <meta name="description" content="How Much Money Do I Owe Kevin" />
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="favicon.ico" />
+    <link rel="icon" href="favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" href="favicon-32x32.png" sizes="32x32" />
+    <link
+      rel="shortcut icon"
+      sizes="196x196"
+      href="android-chrome-192x192.png"
+    />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
+    <!-- CSS Libraries -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/normalize.css@8.0.1/normalize.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/picnic@6.5.2/picnic.min.css"
+      type="text/css"
+    />
+    <!-- Own Resources -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" async></script>
+  </head>
+
+  <body>
+    <h1>Bill Split</h1>
+    <div class="flex three demo">
+      <div>
+        <span>Tax %</span>
+        <input id="tax-input" placeholder="%" value="13" />
+      </div>
+      <div>
+        <span>Tip %</span>
+        <div class="flex two">
+          <div><input placeholder="%" value="12" /></div>
+          <div>
+            <button id="toronto-button" class="error city">
+              No Tip
+            </button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label>
+          <input type="checkbox" checked />
+          <span class="checkable">Tip After Tax?</span>
+        </label>
+        <div>
+          <button id="toronto-button" class="city">
+            Toronto
+          </button>
+          <button id="sanfran-button" class="city">
+            San Fran
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="flex three demo">
+      <div>
+        <span>Sub Total</span>
+        <input placeholder="Amount" value="$5.00" />
+      </div>
+      <div>
+        <span>Total</span>
+        <input placeholder="Amount" value="$6.33" />
+      </div>
+      <div>
+        <div><span>Tax & Tip</span></div>
+        <div><span>$1.33</span></div>
+      </div>
+    </div>
+    <hr />
+    <div class="flex three demo">
+      <div>
+        <span>Item 1</span>
+        <input placeholder="Amount" value="$5.00" />
+      </div>
+      <div>
+        <div><span>Total</span></div>
+        <div><span>6.33</span></div>
+      </div>
+      <div>
+        <button class="success">+</button>
+      </div>
+    </div>
+    <hr />
+    <h3 id="result"></h3>
+  </body>
+</html>
