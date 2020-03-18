@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <title>Split Bills</title>
     <meta name="description" content="How Much Money Do I Owe Kevin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="favicon.ico" />
     <link rel="icon" href="favicon-16x16.png" sizes="16x16" />
@@ -42,9 +43,9 @@
       <div>
         <span>Tip %</span>
         <div class="flex two">
-          <div><input placeholder="%" value="12" /></div>
+          <div><input id="tip-input" placeholder="%" value="12" /></div>
           <div>
-            <button id="toronto-button" class="error city">
+            <button id="clear-tip" class="error city">
               No Tip
             </button>
           </div>
