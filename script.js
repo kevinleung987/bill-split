@@ -8,24 +8,35 @@ const tipInput = document.querySelector("#tip-input");
 // State Variables
 let taxValue = 13;
 let tipValue = 12;
-// Update Functions
-const updateTaxInput = value => {
+// Set State
+const setTax = value => {
   taxValue = value;
   taxInput.value = taxValue;
 };
-const updateTipInput = value => {
+const setTip = value => {
   tipValue = value;
   tipInput.value = tipValue;
-}
+};
+// Update State
+const updateInput = (data, updateFunc, parseFunc) => {
+  const parsed = parseFunc(data);
+  updateFunc(!isNaN(parsed) ? parsed : 0);
+};
 // Event Listeners
-clearTipButton.addEventListener('click', () => {
-  updateTipInput(0);
-})
+taxInput.addEventListener("blur", e => {
+  updateInput(e.target.value, setTax, parseFloat);
+});
+tipInput.addEventListener("blur", e => {
+  updateInput(e.target.value, setTip, parseFloat);
+});
+clearTipButton.addEventListener("click", () => {
+  setTip(0);
+});
 torontoButton.addEventListener("click", () => {
-  updateTaxInput(13);
+  setTax(13);
 });
 sanFranButton.addEventListener("click", () => {
-  updateTaxInput(8.5);
+  setTax(8.5);
 });
 // Setup
 resultField.innerHTML = "You owe: $6.33";

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <title>Split Bills</title>
     <meta name="description" content="How Much Money Do I Owe Kevin" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="favicon.ico" />
     <link rel="icon" href="favicon-16x16.png" sizes="16x16" />
@@ -35,15 +35,15 @@
 
   <body>
     <h1>Bill Split</h1>
-    <div class="flex three demo">
+    <div class="flex three">
       <div>
         <span>Tax %</span>
-        <input id="tax-input" placeholder="%" value="13" />
+        <input id="tax-input" type="number" step="0.5" placeholder="%" value="13" />
       </div>
       <div>
         <span>Tip %</span>
         <div class="flex two">
-          <div><input id="tip-input" placeholder="%" value="12" /></div>
+          <div><input id="tip-input" type="number" step="0.5" placeholder="%" value="12" /></div>
           <div>
             <button id="clear-tip" class="error city">
               No Tip
@@ -61,12 +61,12 @@
             Toronto
           </button>
           <button id="sanfran-button" class="city">
-            San Fran
+            SF
           </button>
         </div>
       </div>
     </div>
-    <div class="flex three demo">
+    <div class="flex three">
       <div>
         <span>Sub Total</span>
         <input placeholder="Amount" value="$5.00" />
@@ -81,17 +81,20 @@
       </div>
     </div>
     <hr />
-    <div class="flex three demo">
+    <div class="flex three">
       <div>
         <span>Item 1</span>
         <input placeholder="Amount" value="$5.00" />
       </div>
       <div>
-        <div><span>Total</span></div>
-        <div><span>6.33</span></div>
+        <div class="flex two">
+          <div><div>Total</div><div>6.33</div></div>
+          <div><div>Percent</div><div>100%</div></div>
+        </div>
       </div>
       <div>
         <button class="success">+</button>
+        <button class="error">x</button>
       </div>
     </div>
     <hr />
