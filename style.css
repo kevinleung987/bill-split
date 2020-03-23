@@ -71,3 +71,15 @@ h6 {
 .city {
   font-size: 0.75em;
 }
+
+.venmo-button {
+  font-weight: bold;
+  background-color: white;
+  color: #3d95ce;
+}
+
+.interac-button {
+  font-weight: bold;
+  background-color: #f3bf36;
+  color: black;
+}

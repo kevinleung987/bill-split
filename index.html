@@ -38,12 +38,26 @@
     <div class="flex three">
       <div>
         <span>Tax %</span>
-        <input id="tax-input" type="number" step="0.5" placeholder="%" value="13" />
+        <input
+          id="tax-input"
+          type="number"
+          step="0.5"
+          placeholder="%"
+          value="13"
+        />
       </div>
       <div>
         <span>Tip %</span>
         <div class="flex two">
-          <div><input id="tip-input" type="number" step="0.5" placeholder="%" value="12" /></div>
+          <div>
+            <input
+              id="tip-input"
+              type="number"
+              step="0.5"
+              placeholder="%"
+              value="12"
+            />
+          </div>
           <div>
             <button id="clear-tip" class="error city">
               No Tip
@@ -88,8 +102,14 @@
       </div>
       <div>
         <div class="flex two">
-          <div><div>Total</div><div>6.33</div></div>
-          <div><div>Percent</div><div>100%</div></div>
+          <div>
+            <div>Total</div>
+            <div>6.33</div>
+          </div>
+          <div>
+            <div>Percent</div>
+            <div>100%</div>
+          </div>
         </div>
       </div>
       <div>
@@ -99,5 +119,22 @@
     </div>
     <hr />
     <h3 id="result"></h3>
+    <div class="flex three">
+      <div>
+        <button class="venmo-button">
+          Pay using Venmo (USD)
+        </button>
+      </div>
+      <div>
+        <button class="interac-button">
+          Interac eTransfer (CAD)
+        </button>
+      </div>
+      <div>
+        <button class="email-button">
+          Email a receipt
+        </button>
+      </div>
+    </div>
   </body>
 </html>
